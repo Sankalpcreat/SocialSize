@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartSizeAI</title>
+    <link rel="icon" href="logo.png" type="image/png"> <!-- Favicon link -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="SmartSizeAI Logo" class="logo-img">
+            <div class="logo-name">SmartSizeAI</div>
+        </div>
+        <div class="nav-buttons">
+            <button class="nav-btn" id="facebook-btn">
+                <img src="facebook-logo.png" alt="Facebook Logo">
+                <span>Facebook</span>
+            </button>
+            <button class="nav-btn" id="instagram-btn">
+                <img src="instagram-logo.png" alt="Instagram Logo">
+                <span>Instagram</span>
+            </button>
+            <button class="nav-btn" id="twitter-btn">
+                <img src="twitter-logo.png" alt="Twitter Logo">
+                <span>Twitter</span>
+            </button>
+            <button class="nav-btn" id="linkedin-btn">
+                <img src="linkedin-logo.png" alt="LinkedIn Logo">
+                <span>LinkedIn</span>
+            </button>
+        </div>
+    </header>
+    <main class="container">
+        <label class="custom-file-upload">
+            <input type="file" id="imageFile">
+            <span>Select Image</span>
+        </label>
+        <button id="resizeButton">Resize and Download</button>
+        
+        <div class="image-preview" id="imagePreview" style="display: none;">
+            <img id="previewImg" alt="Image Preview">
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+</html>

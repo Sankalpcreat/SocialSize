@@ -1,0 +1,220 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa; /* Light cyan background to complement the gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header.navbar {
+    background: linear-gradient(135deg, #0099ff, #00cc99);
+    background-size: 400% 400%; /* Ensure gradient spans the area */
+    animation: gradientAnimation 15s ease infinite; /* Apply animation */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+}
+
+.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('logo-background.png'); /* Background logo image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.logo-img {
+    height: 80px;
+    width: auto;
+    margin-right: 20px;
+}
+
+.logo-name {
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-btn {
+    background: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.1);
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.nav-btn img {
+    height: 30px;
+    width: auto;
+}
+
+.nav-btn span {
+    font-size: 18px;
+}
+
+.nav-btn.selected {
+    background-color: #d0f0c0;
+}
+
+.nav-btn:hover {
+    background: #e0e0e0;
+}
+
+main.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 120px; /* Adjust for navbar height */
+    background-color: #ffffff; /* Light background for content */
+    border-radius: 8px; /* Optional: Rounded corners for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    background-color: #00cc99;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+}
+
+.custom-file-upload input[type="file"] {
+    display: none;
+}
+
+button#resizeButton {
+    background-color: #00cc99;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s ease;
+}
+
+button#resizeButton:hover {
+    background-color: #009999;
+}
+
+.image-preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.image-preview img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .logo-name {
+        font-size: 28px;
+    }
+
+    .nav-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-btn {
+        width: 100%;
+        max-width: none;
+        justify-content: center;
+    }
+
+    .nav-btn img {
+        height: 25px;
+    }
+
+    .nav-btn span {
+        margin-left: 10px;
+    }
+
+    header.navbar {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .custom-file-upload, #resizeButton {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-name {
+        font-size: 24px;
+    }
+
+    .nav-btn img {
+        height: 22px;
+    }
+}

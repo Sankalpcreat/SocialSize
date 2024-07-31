@@ -1,0 +1,14 @@
+{
+  "name": "socialsize",
+  "version": "1.0.0",
+  "main": "scripts.js",
+  "scripts": {
+    "start": "node scripts.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@tensorflow/tfjs": "^4.20.0"
+  }
+}
